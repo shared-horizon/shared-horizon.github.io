@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "shared-horizon-github-io"
+version = "0.1.0"
+description = ""
+authors = ["wanderner <120527788+wanderner@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "shared_horizon"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = {extras = ["imaging"], version = "^9.5.31"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
