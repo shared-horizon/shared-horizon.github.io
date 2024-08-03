@@ -1,0 +1,94 @@
+site_name: Shared Horizon
+site_url: https://shared-horizon.github.io
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: >
+  Copyright &copy; 2022 - <span id="year"></span> Shared Horizon –
+  <a href="#__consent">Change cookie settings</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+theme:
+  name: material
+  language: en
+  logo: assets/sh_logo.png
+  favicon: assets/sh_logo.png
+  features:
+    # - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - toc.integrate
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Code'
+  palette:
+    - primary: custom
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: default
+    #   toggle:
+    #     icon: material/brightness-7
+    #     name: Switch to dark mode
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: slate
+    #   toggle:
+    #     icon: material/brightness-4
+    #     name: Switch to light mode
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/shared-horizon
+
+plugins:
+  - privacy
+  # - search
+  - social
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - toc:
+      title: On this page
+      permalink: true
+  - tables
+  - pymdownx.betterem
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+
+nav:
+  - Home: index.md
+  - About:
+    - about/index.md
